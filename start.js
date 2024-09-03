@@ -19,7 +19,7 @@ module.exports = () => {
         params: {
           path: project_dir,
           venv: path.resolve(__dirname, project_dir, virtual_env),
-          message: "streamlit run app.py --runner.fastReruns false --server.port 5500",
+          message: "streamlit run app.py --runner.fastReruns false --server.runOnSave true --server.port 5500",
           on: [{ event: "/http:\/\/[0-9.:]+/", done: true }],
         },
       },
